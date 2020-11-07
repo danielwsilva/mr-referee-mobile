@@ -1,0 +1,12 @@
+{
+  "name": "mr-referee-mobile",
+  "displayName": "mr-referee-mobile",
+  "expo": {
+    "name": "mr-referee-mobile",
+    "slug": "mr-referee-mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
