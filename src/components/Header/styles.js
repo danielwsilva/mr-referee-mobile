@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Icon from 'react-native-vector-icons/Feather';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   width: 100%;
@@ -13,11 +13,11 @@ export const AlignLogo = styled.View`
   justify-content: space-between;
 `;
 
-export const ArrowLeft = styled(Icon).attrs({
-  name: 'arrow-left',
-  color: '#fff',
-  size: 30,
-})`
+export const ButtonBack = styled(RectButton)`
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
   margin-top: 12px;
 `;
 

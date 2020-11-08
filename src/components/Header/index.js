@@ -1,10 +1,11 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
   AlignLogo,
-  ArrowLeft,
+  ButtonBack,
   Logo,
   TextAlign,
   TitleHeader,
@@ -23,7 +24,9 @@ const Header = ({
   return (
     <Container heightRegister={heightRegister}>
       <AlignLogo>
-        <ArrowLeft onPress={() => navigation.navigate(comeback)} />
+        <ButtonBack onPress={() => navigation.navigate(comeback)}>
+          <Icon name="arrow-left" color="#fff" size={30} />
+        </ButtonBack>
         <Logo source={require('../../assets/logo.png')} />
       </AlignLogo>
 
