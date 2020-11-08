@@ -35,7 +35,7 @@ const Register = ({ navigation }) => {
   const [membros, setMembros] = useState([]);
   const [deputado, setDeputado] = useState('');
 
-  const [enable, setEnable] = useState();
+  const [enable, setEnable] = useState(false);
 
   const [name, setName] = useState('');
   const [document, setDocument] = useState('');
@@ -53,7 +53,6 @@ const Register = ({ navigation }) => {
 
   useEffect(() => {
     setLoading(false);
-    setEnable(false);
     async function loadPartidos() {
       await api_camara
         .get('partidos', { params: { itens: 40 } })
@@ -201,7 +200,6 @@ const Register = ({ navigation }) => {
 
         <LayoutDropDownList>
           <Picker
-            enabled
             selectedValue={partido}
             onValueChange={(itemValue, itemIndex) => {
               setPartido(itemValue),
