@@ -17,7 +17,7 @@ import {
 } from './styles';
 
 const Parliamentary = () => {
-  const [transition, setTransition] = useState();
+  const [transition, setTransition] = useState(false);
   const [avatar, setAvatar] = useState();
   const [name, setName] = useState();
 
@@ -28,8 +28,6 @@ const Parliamentary = () => {
 
   useEffect(() => {
     async function loadInfo() {
-      setTransition(false);
-
       const avatar = (await AsyncStorage.getItem('Avatar')).toString();
       const name = (await AsyncStorage.getItem('Name')).toString();
 
