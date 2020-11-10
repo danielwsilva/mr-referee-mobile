@@ -1,3 +1,4 @@
+/* eslint-disable no-new-wrappers */
 import React, { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import Timeline from 'react-native-timeline-flatlist';
@@ -78,9 +79,13 @@ const Suspect = () => {
                     information.document_id
                       ? information.document_id
                       : 'não encontrado'
-                  } ${'\n'}Data: ${information.issue_date} ${'\n'}Valor: ${
+                  } ${'\n'}Data: ${new Date(
+                    information.issue_date
+                  ).toLocaleDateString('pt-BR')} ${'\n'}Valor: R$${new Number(
                     information.document_value
-                  }`,
+                  )
+                    .toFixed(2)
+                    .replace(/(\d)(?=(\d{3})+(?!\d))/g, 'R$1,')}`,
                   linkText: information.document_id,
                   linkUrl: information.receipt,
                   color_suspicions: suspicions,
