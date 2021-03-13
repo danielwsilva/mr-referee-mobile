@@ -13,7 +13,7 @@
 </p>
 
 <h1 align="center">
-  <img src="./src/assets/lemaj.gif"><br> 
+  <img src="./src/assets/animation/mr-referee-app.gif"><br> 
 </h1>
 
  ## 🏁 Tópicos
