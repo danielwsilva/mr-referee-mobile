@@ -55,6 +55,8 @@ $ cd lemaj-mobile
 # Instale as dependências
 $ yarn
 
+# Após executar o comando yarn para instalar todas as dependências, mover a pasta react-native-timeline-flatlist para dentro de node_models e substituir os arquivos já existentes.
+
 # Execute a aplicação em modo de desenvolvimento
 $ yarn android
 
